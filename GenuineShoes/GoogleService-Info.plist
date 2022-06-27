@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>354498347410-tu1ajecf1spt4c7022ckr1uagsj4gi67.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.354498347410-tu1ajecf1spt4c7022ckr1uagsj4gi67</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAt1zjXzOHV7bYDi3cSBukVwlPf7TM2z5E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>354498347410</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dawoon.GenuineShoes</string>
+	<key>PROJECT_ID</key>
+	<string>genuineshoes-191e6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>genuineshoes-191e6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:354498347410:ios:ca029e4ae6a92f8154414b</string>
+</dict>
+</plist>

@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */; };
+		46DF22735CDB1C78AFCB9593 /* Pods_GenuineShoes_GenuineShoesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */; };
+		739893742869F033000DADEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893732869F033000DADEC /* AppDelegate.swift */; };
+		739893762869F033000DADEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893752869F033000DADEC /* SceneDelegate.swift */; };
+		739893782869F033000DADEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893772869F033000DADEC /* ViewController.swift */; };
+		7398937B2869F033000DADEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739893792869F033000DADEC /* Main.storyboard */; };
+		7398937D2869F036000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7398937C2869F036000DADEC /* Assets.xcassets */; };
+		739893802869F036000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7398937E2869F036000DADEC /* LaunchScreen.storyboard */; };
+		7398938B2869F037000DADEC /* GenuineShoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7398938A2869F037000DADEC /* GenuineShoesTests.swift */; };
+		739893952869F037000DADEC /* GenuineShoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893942869F037000DADEC /* GenuineShoesUITests.swift */; };
+		739893972869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */; };
+		739893A42869F141000DADEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 739893A32869F141000DADEC /* GoogleService-Info.plist */; };
+		BE226F0A08E182669015C402 /* Pods_GenuineShoesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		739893872869F037000DADEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739893682869F033000DADEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7398936F2869F033000DADEC;
+			remoteInfo = GenuineShoes;
+		};
+		739893912869F037000DADEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739893682869F033000DADEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7398936F2869F033000DADEC;
+			remoteInfo = GenuineShoes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		739893702869F033000DADEC /* GenuineShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenuineShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		739893732869F033000DADEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		739893752869F033000DADEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		739893772869F033000DADEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7398937A2869F033000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7398937C2869F036000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7398937F2869F036000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		739893812869F036000DADEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739893862869F037000DADEC /* GenuineShoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenuineShoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7398938A2869F037000DADEC /* GenuineShoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesTests.swift; sourceTree = "<group>"; };
+		739893902869F037000DADEC /* GenuineShoesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenuineShoesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		739893942869F037000DADEC /* GenuineShoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesUITests.swift; sourceTree = "<group>"; };
+		739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		739893A32869F141000DADEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoesTests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoesTests/Pods-GenuineShoesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes_GenuineShoesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D13A48CA7BEC6BDDCE399C3 /* Pods-GenuineShoes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes.release.xcconfig"; sourceTree = "<group>"; };
+		8FAF3CC7C6D9A7B81A0DDEBC /* Pods-GenuineShoes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes.debug.xcconfig"; sourceTree = "<group>"; };
+		C9D705BB6348E9250B6F8481 /* Pods-GenuineShoesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoesTests.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoesTests/Pods-GenuineShoesTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7398936D2869F033000DADEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		739893832869F037000DADEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE226F0A08E182669015C402 /* Pods_GenuineShoesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7398938D2869F037000DADEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46DF22735CDB1C78AFCB9593 /* Pods_GenuineShoes_GenuineShoesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42F1DC5FCD8DF187DE77B3A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FAF3CC7C6D9A7B81A0DDEBC /* Pods-GenuineShoes.debug.xcconfig */,
+				8D13A48CA7BEC6BDDCE399C3 /* Pods-GenuineShoes.release.xcconfig */,
+				7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */,
+				4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */,
+				7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */,
+				C9D705BB6348E9250B6F8481 /* Pods-GenuineShoesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		739893672869F033000DADEC = {
+			isa = PBXGroup;
+			children = (
+				739893722869F033000DADEC /* GenuineShoes */,
+				739893892869F037000DADEC /* GenuineShoesTests */,
+				739893932869F037000DADEC /* GenuineShoesUITests */,
+				739893712869F033000DADEC /* Products */,
+				42F1DC5FCD8DF187DE77B3A6 /* Pods */,
+				CA0EEB8417DFC6ED5AC4230E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		739893712869F033000DADEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				739893702869F033000DADEC /* GenuineShoes.app */,
+				739893862869F037000DADEC /* GenuineShoesTests.xctest */,
+				739893902869F037000DADEC /* GenuineShoesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		739893722869F033000DADEC /* GenuineShoes */ = {
+			isa = PBXGroup;
+			children = (
+				739893732869F033000DADEC /* AppDelegate.swift */,
+				739893752869F033000DADEC /* SceneDelegate.swift */,
+				739893772869F033000DADEC /* ViewController.swift */,
+				739893792869F033000DADEC /* Main.storyboard */,
+				7398937C2869F036000DADEC /* Assets.xcassets */,
+				7398937E2869F036000DADEC /* LaunchScreen.storyboard */,
+				739893812869F036000DADEC /* Info.plist */,
+				739893A32869F141000DADEC /* GoogleService-Info.plist */,
+			);
+			path = GenuineShoes;
+			sourceTree = "<group>";
+		};
+		739893892869F037000DADEC /* GenuineShoesTests */ = {
+			isa = PBXGroup;
+			children = (
+				7398938A2869F037000DADEC /* GenuineShoesTests.swift */,
+			);
+			path = GenuineShoesTests;
+			sourceTree = "<group>";
+		};
+		739893932869F037000DADEC /* GenuineShoesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				739893942869F037000DADEC /* GenuineShoesUITests.swift */,
+				739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */,
+			);
+			path = GenuineShoesUITests;
+			sourceTree = "<group>";
+		};
+		CA0EEB8417DFC6ED5AC4230E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */,
+				87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */,
+				D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7398936F2869F033000DADEC /* GenuineShoes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7398939A2869F037000DADEC /* Build configuration list for PBXNativeTarget "GenuineShoes" */;
+			buildPhases = (
+				C6BDF25281252A2F39991243 /* [CP] Check Pods Manifest.lock */,
+				7398936C2869F033000DADEC /* Sources */,
+				7398936D2869F033000DADEC /* Frameworks */,
+				7398936E2869F033000DADEC /* Resources */,
+				8EA1C0D9C022964085398C21 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GenuineShoes;
+			productName = GenuineShoes;
+			productReference = 739893702869F033000DADEC /* GenuineShoes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		739893852869F037000DADEC /* GenuineShoesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7398939D2869F037000DADEC /* Build configuration list for PBXNativeTarget "GenuineShoesTests" */;
+			buildPhases = (
+				40701605769F7707FE992DF4 /* [CP] Check Pods Manifest.lock */,
+				739893822869F037000DADEC /* Sources */,
+				739893832869F037000DADEC /* Frameworks */,
+				739893842869F037000DADEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				739893882869F037000DADEC /* PBXTargetDependency */,
+			);
+			name = GenuineShoesTests;
+			productName = GenuineShoesTests;
+			productReference = 739893862869F037000DADEC /* GenuineShoesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7398938F2869F037000DADEC /* GenuineShoesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 739893A02869F037000DADEC /* Build configuration list for PBXNativeTarget "GenuineShoesUITests" */;
+			buildPhases = (
+				A5BFF8574F14F0520BE46965 /* [CP] Check Pods Manifest.lock */,
+				7398938C2869F037000DADEC /* Sources */,
+				7398938D2869F037000DADEC /* Frameworks */,
+				7398938E2869F037000DADEC /* Resources */,
+				A4B7A374E99AF1B22592B020 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				739893922869F037000DADEC /* PBXTargetDependency */,
+			);
+			name = GenuineShoesUITests;
+			productName = GenuineShoesUITests;
+			productReference = 739893902869F037000DADEC /* GenuineShoesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		739893682869F033000DADEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7398936F2869F033000DADEC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					739893852869F037000DADEC = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7398936F2869F033000DADEC;
+					};
+					7398938F2869F037000DADEC = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7398936F2869F033000DADEC;
+					};
+				};
+			};
+			buildConfigurationList = 7398936B2869F033000DADEC /* Build configuration list for PBXProject "GenuineShoes" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 739893672869F033000DADEC;
+			productRefGroup = 739893712869F033000DADEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7398936F2869F033000DADEC /* GenuineShoes */,
+				739893852869F037000DADEC /* GenuineShoesTests */,
+				7398938F2869F037000DADEC /* GenuineShoesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7398936E2869F033000DADEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739893802869F036000DADEC /* LaunchScreen.storyboard in Resources */,
+				739893A42869F141000DADEC /* GoogleService-Info.plist in Resources */,
+				7398937D2869F036000DADEC /* Assets.xcassets in Resources */,
+				7398937B2869F033000DADEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		739893842869F037000DADEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7398938E2869F037000DADEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40701605769F7707FE992DF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GenuineShoesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA1C0D9C022964085398C21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B7A374E99AF1B22592B020 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5BFF8574F14F0520BE46965 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GenuineShoes-GenuineShoesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6BDF25281252A2F39991243 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GenuineShoes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7398936C2869F033000DADEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739893782869F033000DADEC /* ViewController.swift in Sources */,
+				739893742869F033000DADEC /* AppDelegate.swift in Sources */,
+				739893762869F033000DADEC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		739893822869F037000DADEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7398938B2869F037000DADEC /* GenuineShoesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7398938C2869F037000DADEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739893952869F037000DADEC /* GenuineShoesUITests.swift in Sources */,
+				739893972869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		739893882869F037000DADEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7398936F2869F033000DADEC /* GenuineShoes */;
+			targetProxy = 739893872869F037000DADEC /* PBXContainerItemProxy */;
+		};
+		739893922869F037000DADEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7398936F2869F033000DADEC /* GenuineShoes */;
+			targetProxy = 739893912869F037000DADEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		739893792869F033000DADEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7398937A2869F033000DADEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7398937E2869F036000DADEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7398937F2869F036000DADEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		739893982869F037000DADEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		739893992869F037000DADEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7398939B2869F037000DADEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FAF3CC7C6D9A7B81A0DDEBC /* Pods-GenuineShoes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF5PSQ2A4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GenuineShoes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7398939C2869F037000DADEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D13A48CA7BEC6BDDCE399C3 /* Pods-GenuineShoes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF5PSQ2A4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GenuineShoes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7398939E2869F037000DADEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF5PSQ2A4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenuineShoes.app/GenuineShoes";
+			};
+			name = Debug;
+		};
+		7398939F2869F037000DADEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D705BB6348E9250B6F8481 /* Pods-GenuineShoesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF5PSQ2A4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenuineShoes.app/GenuineShoes";
+			};
+			name = Release;
+		};
+		739893A12869F037000DADEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF5PSQ2A4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GenuineShoes;
+			};
+			name = Debug;
+		};
+		739893A22869F037000DADEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BF5PSQ2A4C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GenuineShoes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7398936B2869F033000DADEC /* Build configuration list for PBXProject "GenuineShoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739893982869F037000DADEC /* Debug */,
+				739893992869F037000DADEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7398939A2869F037000DADEC /* Build configuration list for PBXNativeTarget "GenuineShoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7398939B2869F037000DADEC /* Debug */,
+				7398939C2869F037000DADEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7398939D2869F037000DADEC /* Build configuration list for PBXNativeTarget "GenuineShoesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7398939E2869F037000DADEC /* Debug */,
+				7398939F2869F037000DADEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		739893A02869F037000DADEC /* Build configuration list for PBXNativeTarget "GenuineShoesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739893A12869F037000DADEC /* Debug */,
+				739893A22869F037000DADEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 739893682869F033000DADEC /* Project object */;
+}
