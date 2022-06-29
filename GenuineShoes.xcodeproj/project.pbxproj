@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */; };
 		46DF22735CDB1C78AFCB9593 /* Pods_GenuineShoes_GenuineShoesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */; };
+		734CBC91286ABCE100493F77 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CBC90286ABCE100493F77 /* MyPageViewController.swift */; };
+		734CBC93286AC0F000493F77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CBC92286AC0F000493F77 /* HomeViewController.swift */; };
+		73646106286ADDB6006BC34A /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73646105286ADDB6006BC34A /* EmailLoginViewController.swift */; };
 		739893742869F033000DADEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893732869F033000DADEC /* AppDelegate.swift */; };
 		739893762869F033000DADEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893752869F033000DADEC /* SceneDelegate.swift */; };
-		739893782869F033000DADEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893772869F033000DADEC /* ViewController.swift */; };
+		739893782869F033000DADEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893772869F033000DADEC /* LoginViewController.swift */; };
 		7398937B2869F033000DADEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739893792869F033000DADEC /* Main.storyboard */; };
 		7398937D2869F036000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7398937C2869F036000DADEC /* Assets.xcassets */; };
 		739893802869F036000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7398937E2869F036000DADEC /* LaunchScreen.storyboard */; };
@@ -43,10 +46,13 @@
 		28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		734CBC90286ABCE100493F77 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		734CBC92286AC0F000493F77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		73646105286ADDB6006BC34A /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		739893702869F033000DADEC /* GenuineShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenuineShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739893732869F033000DADEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739893752869F033000DADEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		739893772869F033000DADEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		739893772869F033000DADEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7398937A2869F033000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7398937C2869F036000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7398937F2869F036000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,12 +139,15 @@
 			children = (
 				739893732869F033000DADEC /* AppDelegate.swift */,
 				739893752869F033000DADEC /* SceneDelegate.swift */,
-				739893772869F033000DADEC /* ViewController.swift */,
+				739893772869F033000DADEC /* LoginViewController.swift */,
 				739893792869F033000DADEC /* Main.storyboard */,
 				7398937C2869F036000DADEC /* Assets.xcassets */,
 				7398937E2869F036000DADEC /* LaunchScreen.storyboard */,
 				739893812869F036000DADEC /* Info.plist */,
 				739893A32869F141000DADEC /* GoogleService-Info.plist */,
+				734CBC90286ABCE100493F77 /* MyPageViewController.swift */,
+				734CBC92286AC0F000493F77 /* HomeViewController.swift */,
+				73646105286ADDB6006BC34A /* EmailLoginViewController.swift */,
 			);
 			path = GenuineShoes;
 			sourceTree = "<group>";
@@ -182,6 +191,7 @@
 				7398936D2869F033000DADEC /* Frameworks */,
 				7398936E2869F033000DADEC /* Resources */,
 				8EA1C0D9C022964085398C21 /* [CP] Embed Pods Frameworks */,
+				879599832FEF8D832EDA1EC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +230,7 @@
 				7398938D2869F037000DADEC /* Frameworks */,
 				7398938E2869F037000DADEC /* Resources */,
 				A4B7A374E99AF1B22592B020 /* [CP] Embed Pods Frameworks */,
+				804D17BCDD57769E2650630A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,6 +336,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		804D17BCDD57769E2650630A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		879599832FEF8D832EDA1EC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8EA1C0D9C022964085398C21 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,9 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739893782869F033000DADEC /* ViewController.swift in Sources */,
+				734CBC93286AC0F000493F77 /* HomeViewController.swift in Sources */,
+				73646106286ADDB6006BC34A /* EmailLoginViewController.swift in Sources */,
+				739893782869F033000DADEC /* LoginViewController.swift in Sources */,
 				739893742869F033000DADEC /* AppDelegate.swift in Sources */,
 				739893762869F033000DADEC /* SceneDelegate.swift in Sources */,
+				734CBC91286ABCE100493F77 /* MyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +567,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -573,7 +620,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -588,6 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF5PSQ2A4C;
@@ -603,8 +650,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoes;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.CarrotMarketCopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,6 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF5PSQ2A4C;
@@ -632,8 +681,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoes;
+				PRODUCT_BUNDLE_IDENTIFIER = dawoon.CarrotMarketCopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -646,6 +696,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF5PSQ2A4C;
@@ -654,6 +706,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -667,6 +721,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF5PSQ2A4C;
@@ -675,6 +731,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dawoon.GenuineShoesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
