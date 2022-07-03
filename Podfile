@@ -7,8 +7,8 @@ target 'GenuineShoes' do
  pod 'Firebase/Auth'
  pod 'GoogleSignIn', '5.0.2'
  pod 'Firebase/Core'
- pod 'Firebase/Storage'
-
+ pod 'Firebase/Database'
+ pod 'CodableFirebase'
   # Pods for GenuineShoes
 
   target 'GenuineShoesTests' do

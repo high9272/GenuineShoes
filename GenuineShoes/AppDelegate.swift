@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FirebaseDatabase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
@@ -73,7 +74,7 @@ extension AppDelegate {
     ///Main 화면으로 보내기
     func showMainViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyboard.instantiateViewController(identifier: "TabBarController") 
+        let mainViewController = storyboard.instantiateViewController(identifier: "MyPageViewController")
         mainViewController.modalPresentationStyle = .fullScreen
         UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
 
