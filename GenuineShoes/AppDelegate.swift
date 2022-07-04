@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         UITabBar.appearance().tintColor = .label
+        UINavigationBar.appearance().tintColor = .label
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         

@@ -14,12 +14,7 @@ struct Model: Codable {
    
     var modelName: String?
     var imageUrl: String?
-    
-    
-//    enum Codingkeys: String, CodingKey {
-//        case age = "age"
-//        case gender = "gender"
-//    }
+    var brandName: String?
     
     
     

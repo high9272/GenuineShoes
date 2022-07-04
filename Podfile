@@ -8,7 +8,7 @@ target 'GenuineShoes' do
  pod 'GoogleSignIn', '5.0.2'
  pod 'Firebase/Core'
  pod 'Firebase/Database'
- pod 'CodableFirebase'
+ pod 'SnapKit', '~> 5.6.0'
   # Pods for GenuineShoes
 
   target 'GenuineShoesTests' do

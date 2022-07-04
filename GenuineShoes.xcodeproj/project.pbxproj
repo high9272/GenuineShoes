@@ -10,7 +10,6 @@
 		101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */; };
 		46DF22735CDB1C78AFCB9593 /* Pods_GenuineShoes_GenuineShoesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */; };
 		734CBC91286ABCE100493F77 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CBC90286ABCE100493F77 /* MyPageViewController.swift */; };
-		73646106286ADDB6006BC34A /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73646105286ADDB6006BC34A /* EmailLoginViewController.swift */; };
 		739893742869F033000DADEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893732869F033000DADEC /* AppDelegate.swift */; };
 		739893762869F033000DADEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893752869F033000DADEC /* SceneDelegate.swift */; };
 		739893782869F033000DADEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893772869F033000DADEC /* LoginViewController.swift */; };
@@ -21,9 +20,12 @@
 		739893952869F037000DADEC /* GenuineShoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893942869F037000DADEC /* GenuineShoesUITests.swift */; };
 		739893972869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */; };
 		739893A42869F141000DADEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 739893A32869F141000DADEC /* GoogleService-Info.plist */; };
+		73A88FFD28729EB900B09C1A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A88FFC28729EB900B09C1A /* SettingViewController.swift */; };
+		73A890002872CCB700B09C1A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A88FFF2872CCB700B09C1A /* WebKit.framework */; };
 		73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DCC4286ED78600681EB6 /* CustomCell.swift */; };
 		73D1819A287177B200683461 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D18199287177B200683461 /* Extension.swift */; };
 		73D3260228708FB000E4D900 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3260128708FAF00E4D900 /* Model.swift */; };
+		73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E1BA612871840300A2CD01 /* DetailViewController.swift */; };
 		BE226F0A08E182669015C402 /* Pods_GenuineShoesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +51,6 @@
 		4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		734CBC90286ABCE100493F77 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
-		73646105286ADDB6006BC34A /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		739893702869F033000DADEC /* GenuineShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenuineShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739893732869F033000DADEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739893752869F033000DADEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +65,12 @@
 		739893942869F037000DADEC /* GenuineShoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesUITests.swift; sourceTree = "<group>"; };
 		739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		739893A32869F141000DADEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73A88FFC28729EB900B09C1A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		73A88FFF2872CCB700B09C1A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		73C1DCC4286ED78600681EB6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		73D18199287177B200683461 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		73D3260128708FAF00E4D900 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		73E1BA612871840300A2CD01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoesTests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoesTests/Pods-GenuineShoesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes_GenuineShoesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D13A48CA7BEC6BDDCE399C3 /* Pods-GenuineShoes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A890002872CCB700B09C1A /* WebKit.framework in Frameworks */,
 				101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,17 +148,15 @@
 			children = (
 				739893732869F033000DADEC /* AppDelegate.swift */,
 				739893752869F033000DADEC /* SceneDelegate.swift */,
-				739893772869F033000DADEC /* LoginViewController.swift */,
+				73D1819B287178D900683461 /* Helper */,
+				73C1DCC3286EB54F00681EB6 /* Model */,
+				73A88FFE2872ACEC00B09C1A /* Controller */,
+				73C1DCC4286ED78600681EB6 /* CustomCell.swift */,
 				739893792869F033000DADEC /* Main.storyboard */,
 				7398937C2869F036000DADEC /* Assets.xcassets */,
 				7398937E2869F036000DADEC /* LaunchScreen.storyboard */,
 				739893812869F036000DADEC /* Info.plist */,
 				739893A32869F141000DADEC /* GoogleService-Info.plist */,
-				734CBC90286ABCE100493F77 /* MyPageViewController.swift */,
-				73C1DCC4286ED78600681EB6 /* CustomCell.swift */,
-				73646105286ADDB6006BC34A /* EmailLoginViewController.swift */,
-				73C1DCC3286EB54F00681EB6 /* Model */,
-				73D1819B287178D900683461 /* Helper */,
 			);
 			path = GenuineShoes;
 			sourceTree = "<group>";
@@ -175,6 +178,17 @@
 			path = GenuineShoesUITests;
 			sourceTree = "<group>";
 		};
+		73A88FFE2872ACEC00B09C1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				739893772869F033000DADEC /* LoginViewController.swift */,
+				734CBC90286ABCE100493F77 /* MyPageViewController.swift */,
+				73E1BA612871840300A2CD01 /* DetailViewController.swift */,
+				73A88FFC28729EB900B09C1A /* SettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		73C1DCC3286EB54F00681EB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +208,7 @@
 		CA0EEB8417DFC6ED5AC4230E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73A88FFF2872CCB700B09C1A /* WebKit.framework */,
 				28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */,
 				87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */,
 				D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */,
@@ -477,10 +492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */,
 				73D3260228708FB000E4D900 /* Model.swift in Sources */,
-				73646106286ADDB6006BC34A /* EmailLoginViewController.swift in Sources */,
 				739893782869F033000DADEC /* LoginViewController.swift in Sources */,
 				73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */,
+				73A88FFD28729EB900B09C1A /* SettingViewController.swift in Sources */,
 				739893742869F033000DADEC /* AppDelegate.swift in Sources */,
 				739893762869F033000DADEC /* SceneDelegate.swift in Sources */,
 				734CBC91286ABCE100493F77 /* MyPageViewController.swift in Sources */,
