@@ -27,12 +27,7 @@ class SettingViewController: UIViewController {
         
         do {
             try Auth.auth().signOut()
-            //viewController.navigationController?.popToRootViewController(animated: false)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let mainViewController = storyboard.instantiateViewController(identifier: "LoginViewController")
-            mainViewController.modalPresentationStyle = .fullScreen
-            present(mainViewController, animated: false)
+            self.navigationController?.pushViewController(LoginViewController(), animated: true)
             
         } catch let signOutError as NSError {
             print("ERROR: signout \(signOutError.localizedDescription)")

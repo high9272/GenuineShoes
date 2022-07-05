@@ -11,48 +11,61 @@ import GoogleSignIn
 import FirebaseDatabase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
-    
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("ERROR Google Sign In \(error.localizedDescription)")
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(
-            withIDToken: authentication.idToken,
-            accessToken: authentication.accessToken
-        )
-        
-        Auth.auth().signIn(with: credential) { authResult, error in
 
-            
-            
-            
-        }
-        
-        
-    }
+    //
+    //    func application(_ app: UIApplication,
+    //                     open url: URL,
+    //                     options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
+    //        return GIDSignIn.sharedInstance().handle( url )
+    //    }
+    //
     
     
     
+    //    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    //        if let error = error {
+    //            print("ERROR Google Sign In \(error.localizedDescription)")
+    //            return
+    //        }
+    //
+    //        guard let authentication = user.authentication else { return }
+    //        let credential = GoogleAuthProvider.credential(
+    //            withIDToken: authentication.idToken,
+    //            accessToken: authentication.accessToken
+    //        )
+    //
+    //        Auth.auth().signIn(with: credential) { authResult, error in
+    //
+    //
+    //        }
+    //
+    //
+    //    }
+    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         UITabBar.appearance().tintColor = .label
         UINavigationBar.appearance().tintColor = .label
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+        //GIDSignIn.sharedInstance().delegate = self
 
+        
         
         return true
     }
+    
+    open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handle = GIDSignIn.sharedInstance().handle(url)
+        return handle
+    }
+    
+    
     //MARK: 복사
     
     
@@ -79,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
 //    ///Main 화면으로 보내기
 //    func showMainViewController() {
 //
-//        let mainstoryboard = UIStoryboard(name: "TabController", bundle: nil)
+//        let mainstoryboard = UIStoryboard(name: "", bundle: nil)
 //        let mainTabController = mainstoryboard.instantiateViewController(withIdentifier: "TabController") as! TabController
 //        mainTabController.selectedViewController = mainTabController.viewControllers?[1]
 //

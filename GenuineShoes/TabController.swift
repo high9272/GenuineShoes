@@ -16,17 +16,21 @@ class TabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.navigationItem.setHidesBackButton(true, animated: true)
         
-        let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
-        myPageViewController.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        
+        let homeViewController = UINavigationController(rootViewController: HomeViewController())
+        homeViewController.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
         let searchViewController = UINavigationController(rootViewController: SearchViewController())
         searchViewController.tabBarItem = UITabBarItem(title: "SEARCH", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
         
+        let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
+        myPageViewController.tabBarItem = UITabBarItem(title: "MY", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person"))
         
         
         
-        viewControllers = [myPageViewController, searchViewController]
+        viewControllers = [homeViewController, searchViewController, myPageViewController]
         
         
     }
