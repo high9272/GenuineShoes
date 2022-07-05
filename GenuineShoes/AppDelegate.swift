@@ -13,23 +13,28 @@ import FirebaseDatabase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     
+    
+    var window: UIWindow?
+    
+    
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print("ERROR Google Sign In \(error.localizedDescription)")
             return
         }
-
+        
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(
             withIDToken: authentication.idToken,
             accessToken: authentication.accessToken
         )
         
-        Auth.auth().signIn(with: credential) { [self] _, _ in
-            // Google Login User 데이터 만들기
-            //setValueCurrentUser()
-            //showMainVCOnRoot()
-            showMainViewController() // 구글 로그인 성공시 보내지는 화면
+        Auth.auth().signIn(with: credential) { authResult, error in
+
+            
+            
+            
         }
         
         
@@ -44,13 +49,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         UINavigationBar.appearance().tintColor = .label
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
-        
+
         
         return true
     }
     //MARK: 복사
-
+    
     
     // MARK: UISceneSession Lifecycle
     
@@ -66,19 +70,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    
-    
-    
 }
 
-extension AppDelegate {
-    ///Main 화면으로 보내기
-    func showMainViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyboard.instantiateViewController(identifier: "MyPageViewController")
-        mainViewController.modalPresentationStyle = .fullScreen
-        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
 
-    }
-}
-
+//
+//extension AppDelegate {
+//
+//    ///Main 화면으로 보내기
+//    func showMainViewController() {
+//
+//        let mainstoryboard = UIStoryboard(name: "TabController", bundle: nil)
+//        let mainTabController = mainstoryboard.instantiateViewController(withIdentifier: "TabController") as! TabController
+//        mainTabController.selectedViewController = mainTabController.viewControllers?[1]
+//
+//
+//    }
+//}
+//

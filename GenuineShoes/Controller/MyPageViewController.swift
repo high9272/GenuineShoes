@@ -68,7 +68,7 @@ class MyPageViewController: UIViewController {
         self.db.child("mydata").observeSingleEvent(of: .value) { snapshot in
             guard let snapData = snapshot.value as? [String:AnyObject] else {return}
             let data = try! JSONSerialization.data(withJSONObject: Array(snapData.values), options: [])
-            print(snapshot)
+            //print(snapshot)
             
             do{
                 let decoder = JSONDecoder()
