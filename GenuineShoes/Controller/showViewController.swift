@@ -15,3 +15,12 @@ func showMainVCOnRoot(){
     //UIApplication.shared.windows.first?.rootViewController?.show(mainVC, sender: nil)
     UIApplication.shared.windows.first?.rootViewController?.present(mainVC, animated: false)
 }
+
+
+func showLoginVCOnRoot(){
+    let mainVC = LoginViewController()
+    mainVC.modalPresentationStyle = .fullScreen
+    
+    //UIApplication.shared.windows.first?.rootViewController?.show(mainVC, sender: nil)
+    UIApplication.shared.windows.first?.rootViewController?.present(mainVC, animated: false)
+}

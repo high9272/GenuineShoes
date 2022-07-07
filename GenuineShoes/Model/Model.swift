@@ -16,21 +16,23 @@ struct Model: Codable {
     var imageUrl: String?
     var brandName: String?
     var legiturl: String?
-    
+    var detail: Detail?
 
-    
-    
 }
-//
+
+struct Detail: Codable {
+    var legiturl: String?
+}
+
 //class MyModel: NSObject{
 //    var email: String
-//
+//    
 //    init(email:String){
 //        self.email = email
 //    }
-//
+//    
 //    convenience override init() {
 //        self.init(email: "")
 //    }
-//
+//    
 //}

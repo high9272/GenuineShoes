@@ -5,6 +5,7 @@ PODS:
   - AppAuth/Core (1.5.0)
   - AppAuth/ExternalUserAgent (1.5.0):
     - AppAuth/Core
+  - CodableFirebase (0.2.1)
   - Firebase/Auth (9.2.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 9.2.0)
@@ -120,6 +121,7 @@ PODS:
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - CodableFirebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -129,6 +131,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppAuth
+    - CodableFirebase
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -150,6 +153,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
+  CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   Firebase: 4ba896cb8e5105d4b9e247e1c1b6222b548df55a
   FirebaseAnalytics: af5a03a8dff7648c7b8486f6a78b1368e0268dd3
   FirebaseAuth: 1c574ab64a051dd86dbe7fd5a3f86b58155b3482
@@ -169,6 +173,6 @@ SPEC CHECKSUMS:
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: bf0e90f12dab4167c6efb4860004574cfb178b8a
+PODFILE CHECKSUM: 8da2d8ae333a6c804f39bab1103733b2955cdf44
 
 COCOAPODS: 1.11.3
