@@ -11,6 +11,7 @@ import GoogleSignIn
 import SnapKit
 
 class LoginViewController: UIViewController, GIDSignInDelegate {
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print("Error because \(error.localizedDescription)")
@@ -28,43 +29,13 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
             }
             print("-------->로그인 성공")
             showMainVCOnRoot()
-//            let mainVC = TabController()
-//            mainVC.modalPresentationStyle = .fullScreen
-//            UIApplication.shared.windows.first?.rootViewController?.show(mainVC, sender: nil)
-            //self.present(TabController(), animated: false)
+
             
         }
     }
     
-    
-    
-    
-    
-    
-    //    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-    //        if let error = error {
-    //            print("ERROR Google Sign In \(error.localizedDescription)")
-    //            return
-    //        }
-    //
-    //        guard let authentication = user.authentication else { return }
-    //        let credential = GoogleAuthProvider.credential(
-    //            withIDToken: authentication.idToken,
-    //            accessToken: authentication.accessToken
-    //        )
-    //
-    //        Auth.auth().signIn(with: credential) { authResult, error in
-    //            self.navigationController?.pushViewController(HomeViewController(), animated: true)
-    //
-    //
-    //        }
-    //
-    //    }
-    //
-    
-    
-    //var showVC = ShowViewController()
-    
+   
+
     func currentUser() -> User? {
         return Auth.auth().currentUser
     }
@@ -78,6 +49,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.label.cgColor
         button.addTarget(self, action: #selector(googleLoginBtnTapped), for: .touchUpInside)
+        button.setImage(UIImage(named: "logo_google"), for: .normal)
         return button
         
     }()
@@ -86,9 +58,16 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().signIn()
         
-        //self.navigationController?.pushViewController(TabController(), animated: false)
+        
         
     }
+    
+    
+    private lazy var logoLabel: UILabel = {
+        let label = UILabel()
+        
+        return label
+    }()
     
     
     
@@ -111,8 +90,8 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         
         view.addSubview(googleLoginBtn)
         googleLoginBtn.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
-            make.height.equalTo(70)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-30)
+            make.height.equalTo(60)
             make.width.equalTo(300)
             make.centerX.equalTo(view)
         }

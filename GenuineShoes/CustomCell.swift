@@ -92,6 +92,7 @@ class CustomCell: UITableViewCell {
             make.centerY.equalTo(contentView)
             make.height.width.equalTo(15)
         }
+        //accessoryType = .disclosureIndicator
         
 
         
