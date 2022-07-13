@@ -24,9 +24,11 @@
 		73A890002872CCB700B09C1A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A88FFF2872CCB700B09C1A /* WebKit.framework */; };
 		73A890022872D3CB00B09C1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A890012872D3CB00B09C1A /* TabController.swift */; };
 		73A890042872D4C800B09C1A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A890032872D4C800B09C1A /* SearchViewController.swift */; };
+		73B62F7D287D583B00DC4A49 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B62F7C287D583B00DC4A49 /* Constant.swift */; };
+		73B62F80287D58B700DC4A49 /* ShoesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B62F7F287D58B700DC4A49 /* ShoesService.swift */; };
 		73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DCC4286ED78600681EB6 /* CustomCell.swift */; };
 		73D1819A287177B200683461 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D18199287177B200683461 /* Extension.swift */; };
-		73D3260228708FB000E4D900 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3260128708FAF00E4D900 /* Model.swift */; };
+		73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3260128708FAF00E4D900 /* ShoesModel.swift */; };
 		73D6BE5A28742E9F00812B20 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6BE5928742E9F00812B20 /* MyPageViewController.swift */; };
 		73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E1BA612871840300A2CD01 /* DetailViewController.swift */; };
 		BE226F0A08E182669015C402 /* Pods_GenuineShoesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */; };
@@ -72,9 +74,11 @@
 		73A88FFF2872CCB700B09C1A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		73A890012872D3CB00B09C1A /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		73A890032872D4C800B09C1A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		73B62F7C287D583B00DC4A49 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		73B62F7F287D58B700DC4A49 /* ShoesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesService.swift; sourceTree = "<group>"; };
 		73C1DCC4286ED78600681EB6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		73D18199287177B200683461 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		73D3260128708FAF00E4D900 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		73D3260128708FAF00E4D900 /* ShoesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesModel.swift; sourceTree = "<group>"; };
 		73D6BE5928742E9F00812B20 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		73E1BA612871840300A2CD01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoesTests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoesTests/Pods-GenuineShoesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		739893672869F033000DADEC = {
 			isa = PBXGroup;
 			children = (
+				73B62F7E287D58A300DC4A49 /* API */,
 				739893722869F033000DADEC /* GenuineShoes */,
 				739893892869F037000DADEC /* GenuineShoesTests */,
 				739893932869F037000DADEC /* GenuineShoesUITests */,
@@ -198,10 +203,18 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		73B62F7E287D58A300DC4A49 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				73B62F7F287D58B700DC4A49 /* ShoesService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		73C1DCC3286EB54F00681EB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				73D3260128708FAF00E4D900 /* Model.swift */,
+				73D3260128708FAF00E4D900 /* ShoesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				73D18199287177B200683461 /* Extension.swift */,
+				73B62F7C287D583B00DC4A49 /* Constant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -503,10 +517,12 @@
 				73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */,
 				733522D32874871100F908DD /* showViewController.swift in Sources */,
 				73A890042872D4C800B09C1A /* SearchViewController.swift in Sources */,
-				73D3260228708FB000E4D900 /* Model.swift in Sources */,
+				73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */,
 				739893782869F033000DADEC /* LoginViewController.swift in Sources */,
 				73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */,
 				73A88FFD28729EB900B09C1A /* SettingViewController.swift in Sources */,
+				73B62F80287D58B700DC4A49 /* ShoesService.swift in Sources */,
+				73B62F7D287D583B00DC4A49 /* Constant.swift in Sources */,
 				73A890022872D3CB00B09C1A /* TabController.swift in Sources */,
 				73D6BE5A28742E9F00812B20 /* MyPageViewController.swift in Sources */,
 				739893742869F033000DADEC /* AppDelegate.swift in Sources */,

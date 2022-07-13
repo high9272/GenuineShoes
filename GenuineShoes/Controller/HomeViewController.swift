@@ -11,43 +11,44 @@ import Firebase
 import GoogleSignIn
 import FirebaseDatabase
 import SnapKit
-import CodableFirebase
+//import CodableFirebase
 
 
 class HomeViewController: UIViewController {
-    //    var mydata: Model?
-    var models = [Model]()
-    let db = Database.database().reference()
-    var ref: DatabaseReference! //FireBase RealTime Database
+ 
+    var shoesModels = [ShoesModel]()
     
+    var ref: DatabaseReference! //FireBase RealTime Database
+    var shoesmodel: ShoesModel?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         return tableView
     }()
-    
+//
     private lazy var myLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
         label.text = "dasndasnjadsn"
         label.textAlignment = .center
-        
-        
+
+
         return label
     }()
-    
+
     
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        
+        //ShoesService.fetchData(completion: shoesModels)
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "customCell")
         tableView.dataSource = self
         tableView.delegate = self
         
-        
+       
         fetchUser()
+        //ShoesService.fetchData()
         //setupNavigationBarButton()
         
         //MARK: 네비게이션 백버튼 숨기기
@@ -69,41 +70,25 @@ class HomeViewController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-10)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            
+
         }
+        
         
     }
     
-    //    func setupNavigationBarButton(){
-    //        let settingButton = UIButton(type: .custom)
-    //        settingButton.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
-    //        settingButton.setImage(UIImage(systemName: "gearshape.fill"), for: .normal)
-    //        settingButton.addTarget(self, action: #selector(settingButtonTapped), for: .touchUpInside)
-    //        let settingBarButton = UIBarButtonItem(customView: settingButton)
-    //
-    //        let navItems = [settingBarButton]
-    //
-    //        navigationItem.rightBarButtonItems = navItems
-    //
-    //    }
-    //
-    //    @objc func settingButtonTapped(){
-    //        self.navigationController?.pushViewController(SettingViewController(), animated: true)
-    //
-    //    }
     
     
     //MARK: 데이터 페치 코드
     func fetchUser(){
-        self.db.child("mydata").observeSingleEvent(of: .value) { snapshot in
+        db.observeSingleEvent(of: .value) { snapshot in
             guard let snapData = snapshot.value as? [String:AnyObject] else {return}
             let data = try! JSONSerialization.data(withJSONObject: Array(snapData.values), options: [])
             //print(snapshot)
             
             do{
                 let decoder = JSONDecoder()
-                let modelList: [Model] = try decoder.decode([Model].self, from: data)
-                self.models = modelList
+                let modelList: [ShoesModel] = try decoder.decode([ShoesModel].self, from: data)
+                self.shoesModels = modelList
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -131,7 +116,7 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
         
         let detailViewController = DetailViewController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
-        detailViewController.detail = models[indexPath.row].detail
+        detailViewController.detail = shoesModels[indexPath.row].detail
         
         
         
@@ -149,20 +134,21 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
-        
-        
+        return shoesModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? CustomCell else {return UITableViewCell()}
         cell.selectionStyle = .none
-        let model = models[indexPath.row]
+        let model = shoesModels[indexPath.row]
         cell.modelLabel.text = model.modelName
         cell.brandLabel.text = model.brandName
-        //cell.modelLabel.text = models[indexPath.row].brandName
+ 
+        
+
         if let imageUrl = model.imageUrl {
             cell.snkImage.loadImageUsingCacheWithUrlString(imageUrl)
+
         }
         
         return cell
@@ -170,5 +156,3 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
     
     
 }
-
-
