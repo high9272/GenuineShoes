@@ -11,7 +11,7 @@ import Firebase
 import GoogleSignIn
 import FirebaseDatabase
 import SnapKit
-//import CodableFirebase
+
 
 
 class HomeViewController: UIViewController {
@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         ref = Database.database().reference()
         //ShoesService.fetchData(completion: shoesModels)
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: "customCell")
@@ -98,11 +99,7 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
         self.navigationController?.pushViewController(detailViewController, animated: true)
         //디테일뷰 컨트롤러에 detail 정보를 인덱스패스로 넘겨줌
         detailViewController.detail = shoesModels[indexPath.row].detail
-        
-        
-        
-        
-        
+   
         
     }
     
@@ -123,7 +120,7 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
         cell.selectionStyle = .none
         let model = shoesModels[indexPath.row]
         cell.modelLabel.text = model.modelName
-        cell.brandLabel.text = model.brandName
+        //cell.brandLabel.text = model.brandName
  
         
 

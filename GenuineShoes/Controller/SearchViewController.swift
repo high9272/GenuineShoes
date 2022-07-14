@@ -101,7 +101,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 150
+        return 100
         
     }
     
@@ -132,7 +132,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.modelLabel.text = models.modelName
-        cell.brandLabel.text = models.brandName
+        //cell.brandLabel.text = models.brandName
         // cell.modelLabel.text = models[indexPath.row].brandName
         if let imageUrl = models.imageUrl {
             cell.snkImage.loadImageUsingCacheWithUrlString(imageUrl)

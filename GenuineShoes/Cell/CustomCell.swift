@@ -17,17 +17,18 @@ class CustomCell: UITableViewCell {
         label.textColor = .label
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 0
-        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .center
         label.sizeToFit()
         return label
         
     }()
     
-    lazy var brandLabel: UILabel = {
-        var label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        return label
-    }()
+//    lazy var brandLabel: UILabel = {
+//        var label = UILabel()
+//        label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+//        return label
+//    }()
     
     lazy var snkImage: UIImageView = {
         var imageView = UIImageView()
@@ -56,7 +57,7 @@ class CustomCell: UITableViewCell {
 //        contentView.addSubview(snkImage)
 //        contentView.addSubview(brandLabel)
 //
-        [modelLabel,snkImage,brandLabel,rightImage].forEach {contentView.addSubview($0)}
+        [modelLabel,snkImage,rightImage].forEach {contentView.addSubview($0)}
         
         setupLayout()
         
@@ -69,7 +70,7 @@ class CustomCell: UITableViewCell {
             make.leading.equalToSuperview()
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.width.equalTo(150)
+            make.width.height.equalTo(100)
         }
         
         
@@ -80,11 +81,11 @@ class CustomCell: UITableViewCell {
             make.trailing.equalTo(rightImage.snp.leading)
         }
         
-        brandLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(modelLabel.snp.top).offset(10)
-            make.leading.equalTo(snkImage.snp.trailing).offset(4)
-        }
-        
+//        brandLabel.snp.makeConstraints { make in
+//            make.bottom.equalTo(modelLabel.snp.top).offset(10)
+//            make.leading.equalTo(snkImage.snp.trailing).offset(4)
+//        }
+//
         rightImage.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(4)
             //make.top.equalToSuperview().offset(30)

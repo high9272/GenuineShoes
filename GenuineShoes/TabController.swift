@@ -19,6 +19,10 @@ class TabController: UITabBarController {
         //self.navigationItem.setHidesBackButton(true, animated: true)
         
         
+        let collectionViewController = UINavigationController(rootViewController: HomeCollectionViewController())
+        collectionViewController.tabBarItem = UITabBarItem(title: "SAMPLE", image:UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house"))
+        
+        
         let homeViewController = UINavigationController(rootViewController: HomeViewController())
         homeViewController.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
@@ -30,7 +34,7 @@ class TabController: UITabBarController {
         
         
         
-        viewControllers = [homeViewController, searchViewController, myPageViewController]
+        viewControllers = [collectionViewController, searchViewController, myPageViewController]
         
         
     }
