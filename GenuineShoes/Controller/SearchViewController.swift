@@ -37,12 +37,13 @@ class SearchViewController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.isHidden = true
         return tableView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.isHidden = true
+        
         
         ref = Database.database().reference()
         
@@ -107,16 +108,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
-        //detailViewController.detail = shoesModels[indexPath.row].detail
-        print("이것을 눌러썽요---->\(shoesModels[indexPath.row])")
+        detailViewController.detail = shoesModels[indexPath.row].detail
+        print("clicked Cell -----> \(shoesModels[indexPath.row])")
         
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
-        
+
         return inSearchMode ? filteredShoes.count : shoesModels.count
         
     }
@@ -142,6 +142,26 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        print("searchBarTextDidBeginEditing")
+        self.tableView.reloadData()
+    }
+    
+
+    
+    
+    private func dismissKeyboard() {
+        searchController.resignFirstResponder()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        tableView.isHidden = false
+        print("searchBarSearchButtonClicked")
+        dismissKeyboard()
+    }
+    
+}
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
@@ -149,9 +169,12 @@ extension SearchViewController: UISearchResultsUpdating {
         guard let searchText = searchController.searchBar.text?.lowercased() else {return}
         
         filteredShoes = shoesModels.filter({ $0.nick.contains(searchText)})
+        tableView.isHidden = false
         print("\(searchText)")
         print("---->필터링..\(filteredShoes)")
-        self.tableView.reloadData()
+      
+        self.tableView.reloadData() //이 코드를 지우면 필터가 안됨!!!!
 
     }
 }
+

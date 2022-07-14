@@ -25,18 +25,7 @@ class HomeViewController: UIViewController {
         let tableView = UITableView()
         return tableView
     }()
-//
-    private lazy var myLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .label
-        label.text = "dasndasnjadsn"
-        label.textAlignment = .center
 
-
-        return label
-    }()
-
-    
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,21 +46,12 @@ class HomeViewController: UIViewController {
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.height.equalTo(600)
+            make.edges.equalToSuperview()
+          
             
         }
         
-        view.addSubview(myLabel)
-        myLabel.snp.makeConstraints { make in
-            //make.top.equalTo(tableView.snp.bottom)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-10)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
 
-        }
         
         
     }
@@ -92,7 +72,7 @@ class HomeViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    self.myLabel.text = "\(modelList.count)"
+                    
                     
                     
                 }
@@ -116,6 +96,7 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate {
         
         let detailViewController = DetailViewController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
+        //디테일뷰 컨트롤러에 detail 정보를 인덱스패스로 넘겨줌
         detailViewController.detail = shoesModels[indexPath.row].detail
         
         

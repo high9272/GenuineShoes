@@ -22,29 +22,42 @@ class DetailViewController: UIViewController, WKUIDelegate {
     var models = [ShoesModel]()
 
     
+    //MARK: 출력 테스트용
+//    lazy var myLabel: UILabel = {
+//
+//        let label = UILabel()
+//        label.textColor = .label
+//
+//        label.text = detail?.legiturl
+//
+//
+//        return label
+//    }()
     
-    lazy var myLabel: UILabel = {
-    
-        let label = UILabel()
-        label.textColor = .label
-
-        label.text = detail?.legiturl
-    
-        
-        return label
+    lazy var webView: WKWebView = {
+        let webConfiguration = WKWebViewConfiguration()
+        let webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        return webView
     }()
-    
-    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(myLabel)
         
-        myLabel.snp.makeConstraints { make in
-            make.center.equalTo(view.center)
+        let myUrl = detail?.legiturl
+        
+        let myURL = URL(string: myUrl ?? "")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+        view.addSubview(webView)
+        webView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
+
+        
 
     }
 
