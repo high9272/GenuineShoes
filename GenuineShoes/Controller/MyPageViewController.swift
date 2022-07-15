@@ -7,7 +7,50 @@
 
 import Foundation
 import UIKit
-
+import SnapKit
+import Firebase
+import GoogleSignIn
+import FirebaseDatabase
 class MyPageViewController: UIViewController {
+    
+    private lazy var logoutButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("로그아웃", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        button.setTitleColor(UIColor.gray, for: .normal)
+        button.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    @objc func logoutButtonTapped() {
+        
+        do {
+            try Auth.auth().signOut()
+            print("로그아웃")
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        } catch let signOutError as NSError {
+            print("ERROR: signout \(signOutError.localizedDescription)")
+        }
+        
+        
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //view.backgroundColor = .white
+        setupLayout()
+    }
+    
+    func setupLayout(){
+        view.addSubview(logoutButton)
+        logoutButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-10)
+            make.width.equalTo(100)
+            make.height.equalTo(50)
+            make.centerX.equalTo(view)
+        }
+    }
     
 }
