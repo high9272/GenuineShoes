@@ -21,18 +21,7 @@ class DetailViewController: UIViewController, WKUIDelegate {
 
     var models = [ShoesModel]()
 
-    
-    //MARK: 출력 테스트용
-//    lazy var myLabel: UILabel = {
-//
-//        let label = UILabel()
-//        label.textColor = .label
-//
-//        label.text = detail?.legiturl
-//
-//
-//        return label
-//    }()
+
     
     lazy var webView: WKWebView = {
         let webConfiguration = WKWebViewConfiguration()

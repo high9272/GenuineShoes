@@ -43,29 +43,69 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     private lazy var googleLoginBtn: UIButton = {
         let button = UIButton()
         button.setTitle("구글로 로그인", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         button.setTitleColor(UIColor.label, for: .normal)
+        button.contentHorizontalAlignment = .center
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.label.cgColor
         button.addTarget(self, action: #selector(googleLoginBtnTapped), for: .touchUpInside)
         button.setImage(UIImage(named: "logo_google"), for: .normal)
+        //button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
+        
+        return button
+        
+    }()
+    @objc func googleLoginBtnTapped(){
+        
+        GIDSignIn.sharedInstance().signIn()
+
+    }
+    
+    
+    private lazy var emailLoginBtn: UIButton = {
+        let button = UIButton()
+        button.setTitle("이메일로 로그인", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        button.setTitleColor(UIColor.label, for: .normal)
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.label.cgColor
+        button.setImage(UIImage(systemName: "envelope.fill"), for: .normal)
+        button.contentHorizontalAlignment = .center
+        button.addTarget(self, action: #selector(emailLoginBtnTapped), for: .touchUpInside)
+        
+        //button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
         return button
         
     }()
     
-    @objc func googleLoginBtnTapped(){
-        
-        GIDSignIn.sharedInstance().signIn()
-        
-        
-        
+    @objc func emailLoginBtnTapped(){
+        self.navigationController?.pushViewController(EmailLoginViewController(), animated: true)
     }
     
     
-    private lazy var logoLabel: UILabel = {
+    
+    
+    private lazy var loginSkipBtn: UIButton = {
+        let button = UIButton()
+        button.setTitle("로그인 건너뛰기", for: .normal)
+        button.setTitleColor(UIColor.systemGray2, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        button.addTarget(self, action: #selector(loginSkipBtnTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func loginSkipBtnTapped(){
+        showMainVCOnRoot()
+    }
+    
+    
+    lazy var logoLabel: UILabel = {
         let label = UILabel()
-        
+        label.font = UIFont(name: "Copperplate-Bold", size: 25)
+        label.text = "GenuineShoes"
+        label.textAlignment = .center
         return label
     }()
     
@@ -79,22 +119,8 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         // Do any additional setup after loading the view.
         print("running")
-        
-        
-        //        googleLoginBtn.layer.cornerRadius = 7
-        //        googleLoginBtn.layer.borderColor = UIColor.label.cgColor
-        //        googleLoginBtn.layer.borderWidth = 1
-        //        emailLoginBtn.layer.cornerRadius = 7
-        //        emailLoginBtn.layer.borderColor = UIColor.label.cgColor
-        //        emailLoginBtn.layer.borderWidth = 1
-        
-        view.addSubview(googleLoginBtn)
-        googleLoginBtn.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-30)
-            make.height.equalTo(60)
-            make.width.equalTo(300)
-            make.centerX.equalTo(view)
-        }
+        setupLayout()
+
         
         
         if currentUser() != nil {
@@ -131,5 +157,43 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     //    }
     
     
+}
+
+extension LoginViewController {
+    func setupLayout(){
+        
+        [loginSkipBtn, googleLoginBtn, emailLoginBtn, logoLabel].forEach {view.addSubview($0)}
+        
+        loginSkipBtn.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-100)
+            make.height.equalTo(30)
+            make.width.equalTo(300)
+            make.centerX.equalTo(view)
+        }
+        
+        googleLoginBtn.snp.makeConstraints { make in
+            make.bottom.equalTo(loginSkipBtn.snp.top).offset(-35)
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+            make.centerX.equalTo(view)
+        }
+        
+        emailLoginBtn.snp.makeConstraints { make in
+            make.height.equalTo(50)
+            make.width.equalTo(300)
+            make.centerX.equalTo(view)
+            make.bottom.equalTo(googleLoginBtn.snp.top).offset(-25)
+        }
+        
+        logoLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(50)
+            make.leading.equalToSuperview().offset(25)
+            make.trailing.equalToSuperview().offset(-25)
+            make.centerX.equalTo(view)
+        }
+        
+
+        
+    }
 }
 

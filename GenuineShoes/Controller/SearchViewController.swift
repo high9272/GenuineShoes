@@ -52,8 +52,8 @@ class SearchViewController: UIViewController {
         tableView.delegate = self
         setupLayout()
         navigationItem.searchController = searchController
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "신발 검색하기"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.title = "신발 검색하기"
         print("------>\(shoesModels.count)")
         searchController.searchResultsUpdater = self
         fetchUser()

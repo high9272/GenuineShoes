@@ -32,6 +32,7 @@
 		73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DCC4286ED78600681EB6 /* CustomCell.swift */; };
 		73D1819A287177B200683461 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D18199287177B200683461 /* Extension.swift */; };
 		73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3260128708FAF00E4D900 /* ShoesModel.swift */; };
+		73D43F952881731F003D05F7 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D43F942881731F003D05F7 /* EmailLoginViewController.swift */; };
 		73D6BE5A28742E9F00812B20 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6BE5928742E9F00812B20 /* MyPageViewController.swift */; };
 		73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E1BA612871840300A2CD01 /* DetailViewController.swift */; };
 		BE226F0A08E182669015C402 /* Pods_GenuineShoesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */; };
@@ -85,6 +86,7 @@
 		73C1DCC4286ED78600681EB6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		73D18199287177B200683461 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		73D3260128708FAF00E4D900 /* ShoesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesModel.swift; sourceTree = "<group>"; };
+		73D43F942881731F003D05F7 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		73D6BE5928742E9F00812B20 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		73E1BA612871840300A2CD01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoesTests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoesTests/Pods-GenuineShoesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,13 +201,13 @@
 			isa = PBXGroup;
 			children = (
 				739893772869F033000DADEC /* LoginViewController.swift */,
+				73AA3CEB287FCD4600AB0681 /* HomeCollectionViewController.swift */,
 				734CBC90286ABCE100493F77 /* HomeViewController.swift */,
 				73E1BA612871840300A2CD01 /* DetailViewController.swift */,
 				73A88FFC28729EB900B09C1A /* SettingViewController.swift */,
 				73A890032872D4C800B09C1A /* SearchViewController.swift */,
 				73D6BE5928742E9F00812B20 /* MyPageViewController.swift */,
-				733522D22874871100F908DD /* showViewController.swift */,
-				73AA3CEB287FCD4600AB0681 /* HomeCollectionViewController.swift */,
+				73D43F942881731F003D05F7 /* EmailLoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +243,7 @@
 			children = (
 				73D18199287177B200683461 /* Extension.swift */,
 				73B62F7C287D583B00DC4A49 /* Constant.swift */,
+				733522D22874871100F908DD /* showViewController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */,
+				73D43F952881731F003D05F7 /* EmailLoginViewController.swift in Sources */,
 				733522D32874871100F908DD /* showViewController.swift in Sources */,
 				73AA3CEE287FCE1A00AB0681 /* HomeCollectionViewCell.swift in Sources */,
 				73A890042872D4C800B09C1A /* SearchViewController.swift in Sources */,

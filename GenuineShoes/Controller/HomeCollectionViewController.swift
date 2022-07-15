@@ -39,6 +39,7 @@ class HomeCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
+        self.navigationController?.navigationBar.isHidden = true
         ref = Database.database().reference()
         view.addSubview(myCollectionView)
         myCollectionView.snp.makeConstraints { make in
@@ -91,12 +92,14 @@ extension HomeCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard
             kind == UICollectionView.elementKindSectionHeader,
+            
             let header = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
                 withReuseIdentifier: "HomeCollectionHeaderView",
                 for: indexPath
             ) as? HomeCollectionHeaderView
         else { return UICollectionReusableView() }
+        
 
         header.setup()
 
@@ -132,9 +135,9 @@ extension HomeCollectionViewController: UICollectionViewDelegateFlowLayout {
         let width: CGFloat = collectionView.frame.width / 2.1
         return CGSize(width: width, height: 230)
     }
-    
+    //------>MARK: 헤더뷰
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width , height: 150.0)
+        CGSize(width: collectionView.frame.width  , height: 100.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
