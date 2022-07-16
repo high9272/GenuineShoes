@@ -8,13 +8,17 @@
 import Foundation
 import SnapKit
 import UIKit
+import Firebase
+import FirebaseAuth
 
-let mainstoryboard = UIStoryboard(name: "TabController", bundle: nil)
+
 
 class TabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkIfUserIsLoggedIn()
+        
         
         //self.navigationItem.setHidesBackButton(true, animated: true)
         
@@ -39,4 +43,20 @@ class TabController: UITabBarController {
         
     }
     
+    
+    func checkIfUserIsLoggedIn(){
+    
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                let controller = LoginViewController()
+                let nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: false, completion: nil)
+            }
+
+            
+        }
+        
+        
+    }
 }

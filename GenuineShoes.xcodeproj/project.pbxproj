@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */; };
 		46DF22735CDB1C78AFCB9593 /* Pods_GenuineShoes_GenuineShoesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */; };
-		733522D32874871100F908DD /* showViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733522D22874871100F908DD /* showViewController.swift */; };
 		734CBC91286ABCE100493F77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CBC90286ABCE100493F77 /* HomeViewController.swift */; };
 		739893742869F033000DADEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893732869F033000DADEC /* AppDelegate.swift */; };
 		739893762869F033000DADEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893752869F033000DADEC /* SceneDelegate.swift */; };
@@ -59,7 +58,6 @@
 		28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		733522D22874871100F908DD /* showViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showViewController.swift; sourceTree = "<group>"; };
 		734CBC90286ABCE100493F77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		739893702869F033000DADEC /* GenuineShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenuineShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739893732869F033000DADEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,13 +199,13 @@
 			isa = PBXGroup;
 			children = (
 				739893772869F033000DADEC /* LoginViewController.swift */,
+				73D43F942881731F003D05F7 /* EmailLoginViewController.swift */,
 				73AA3CEB287FCD4600AB0681 /* HomeCollectionViewController.swift */,
 				734CBC90286ABCE100493F77 /* HomeViewController.swift */,
 				73E1BA612871840300A2CD01 /* DetailViewController.swift */,
 				73A88FFC28729EB900B09C1A /* SettingViewController.swift */,
 				73A890032872D4C800B09C1A /* SearchViewController.swift */,
 				73D6BE5928742E9F00812B20 /* MyPageViewController.swift */,
-				73D43F942881731F003D05F7 /* EmailLoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,7 +241,6 @@
 			children = (
 				73D18199287177B200683461 /* Extension.swift */,
 				73B62F7C287D583B00DC4A49 /* Constant.swift */,
-				733522D22874871100F908DD /* showViewController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -536,7 +533,6 @@
 			files = (
 				73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */,
 				73D43F952881731F003D05F7 /* EmailLoginViewController.swift in Sources */,
-				733522D32874871100F908DD /* showViewController.swift in Sources */,
 				73AA3CEE287FCE1A00AB0681 /* HomeCollectionViewCell.swift in Sources */,
 				73A890042872D4C800B09C1A /* SearchViewController.swift in Sources */,
 				73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */,

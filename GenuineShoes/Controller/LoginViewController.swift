@@ -28,7 +28,8 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                 return
             }
             print("-------->로그인 성공")
-            showMainVCOnRoot()
+//            showMainVCOnRoot()
+            self.dismiss(animated: true, completion:  nil)
 
             
         }
@@ -114,30 +115,40 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLayout()
         self.navigationItem.setHidesBackButton(true, animated: true)
         GIDSignIn.sharedInstance().presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
         // Do any additional setup after loading the view.
         print("running")
-        setupLayout()
+        
 
         
         
-        if currentUser() != nil {
-            //showMainViewController()
-            print("--------->이미 로그인됨")
-           showMainVCOnRoot()
-            //self.present(TabController(), animated: false)
-            
-            //self.navigationController?.pushViewController(TabController(), animated: true)
-            
-            
-        }else {
-            print("-------->로그인 재시도")
-        }
+
         
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//
+//
+//
+//        if currentUser() != nil {
+//            //showMainViewController()
+//            print("--------->이미 로그인됨")
+//           showMainVCOnRoot()
+//            //self.present(TabController(), animated: false)
+//            
+//            //self.navigationController?.pushViewController(TabController(), animated: true)
+//
+//
+//        }else {
+//            print("-------->로그인 재시도")
+//        }
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

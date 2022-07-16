@@ -23,12 +23,18 @@ class MyPageViewController: UIViewController {
         return button
     }()
     
-    @objc func logoutButtonTapped() {
+    @objc func logoutButtonTapped(_ viewController: UIViewController) {
         
         do {
             try Auth.auth().signOut()
             print("로그아웃")
-            navigationController?.pushViewController(LoginViewController(), animated: true)
+
+            let controller = LoginViewController()
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: false, completion: nil)
+            
+            
         } catch let signOutError as NSError {
             print("ERROR: signout \(signOutError.localizedDescription)")
         }
@@ -37,9 +43,11 @@ class MyPageViewController: UIViewController {
         
     }
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .white
+        
         setupLayout()
     }
     
@@ -50,6 +58,8 @@ class MyPageViewController: UIViewController {
             make.width.equalTo(100)
             make.height.equalTo(50)
             make.centerX.equalTo(view)
+            
+   
         }
     }
     
