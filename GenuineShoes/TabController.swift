@@ -24,7 +24,7 @@ class TabController: UITabBarController {
         
         
         let collectionViewController = UINavigationController(rootViewController: HomeCollectionViewController())
-        collectionViewController.tabBarItem = UITabBarItem(title: "SAMPLE", image:UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house"))
+        collectionViewController.tabBarItem = UITabBarItem(title: "HOME", image:UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house"))
         
         
 //        let homeViewController = UINavigationController(rootViewController: HomeViewController())
