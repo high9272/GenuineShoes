@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = TabController()
+        window?.rootViewController = TabController() // 루트뷰 컨트롤러를 아예 탭 컨트롤러로 변경
         window?.tintColor = .label
         window?.makeKeyAndVisible()
         

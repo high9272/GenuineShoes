@@ -28,15 +28,16 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                 return
             }
             print("-------->로그인 성공")
-//            showMainVCOnRoot()
+            //MARK: 루트뷰를 탭뷰로 설정하고 그 위를 LoginViewController가 얹어지는 방식 (dissmiss를 하면 LoginViewController뷰가 사라진다)
+            
             self.dismiss(animated: true, completion:  nil)
-
+            
             
         }
     }
     
-   
-
+    
+    
     func currentUser() -> User? {
         return Auth.auth().currentUser
     }
@@ -60,7 +61,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     @objc func googleLoginBtnTapped(){
         
         GIDSignIn.sharedInstance().signIn()
-
+        
     }
     
     
@@ -98,7 +99,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     }()
     
     @objc func loginSkipBtnTapped(){
-        showMainVCOnRoot()
+        self.dismiss(animated: false)
     }
     
     
@@ -122,33 +123,11 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         // Do any additional setup after loading the view.
         print("running")
         
-
-        
-        
-
+    
         
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//
-//
-//
-//        if currentUser() != nil {
-//            //showMainViewController()
-//            print("--------->이미 로그인됨")
-//           showMainVCOnRoot()
-//            //self.present(TabController(), animated: false)
-//            
-//            //self.navigationController?.pushViewController(TabController(), animated: true)
-//
-//
-//        }else {
-//            print("-------->로그인 재시도")
-//        }
-        
-    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -159,13 +138,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     }
     
     
-    
-    //    func showMainViewController() {
-    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //        let mainViewController = storyboard.instantiateViewController(identifier: "TabController")
-    //        mainViewController.modalPresentationStyle = .fullScreen
-    //        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
-    //    }
     
     
 }
@@ -203,7 +175,7 @@ extension LoginViewController {
             make.centerX.equalTo(view)
         }
         
-
+        
         
     }
 }

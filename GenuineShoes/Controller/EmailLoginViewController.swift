@@ -20,6 +20,7 @@ class EmailLoginViewController: UIViewController {
         textField.layer.borderColor = UIColor.label.cgColor
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
+        textField.keyboardType = .emailAddress
         return textField
     }()
     
@@ -30,7 +31,7 @@ class EmailLoginViewController: UIViewController {
         textField.layer.borderColor = UIColor.label.cgColor
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
-        
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -61,14 +62,29 @@ class EmailLoginViewController: UIViewController {
                 case 17007: //이미 가입한 계정일 때
                     self.loginUser(withEmail: email, password: password)
                 default:
-                    print("\(error.localizedDescription)")
+                   
+                    self.errorLabel.text = error.localizedDescription
                 }
             } else {
-                showMainVCOnRoot()
+
+                print("이메일 로그인 버튼 클릭")
+                self.dismiss(animated: false, completion: nil)
             }
         }
         
     }
+    
+    
+    lazy var errorLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .systemRed
+        return label
+    }()
+    
+    
+    
+    
+    
     
     func loginUser(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) {[weak self] _, error in
@@ -77,7 +93,7 @@ class EmailLoginViewController: UIViewController {
             if let error = error {
                 print("\(error.localizedDescription)")
             } else {
-               showMainVCOnRoot()
+               
             }
         }
     }
@@ -94,7 +110,7 @@ class EmailLoginViewController: UIViewController {
     
     
     func setupLayout(){
-        [emailTextField,passwordTextField,loginBtn].forEach {view.addSubview($0)}
+        [emailTextField,passwordTextField,loginBtn,errorLabel].forEach {view.addSubview($0)}
         //view.addSubview(emailTextField)
         emailTextField.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(150)
@@ -109,8 +125,15 @@ class EmailLoginViewController: UIViewController {
             make.height.equalTo(50)
         }
         
+        errorLabel.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(5)
+            make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
+            make.height.equalTo(40)
+        }
+        
         loginBtn.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(50)
+            make.top.equalTo(errorLabel.snp.bottom).offset(50)
             make.centerX.equalTo(view)
             make.height.equalTo(50)
             make.width.equalTo(100)
