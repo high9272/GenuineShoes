@@ -43,11 +43,11 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupNavigationBar()
         
         ref = Database.database().reference()
         
-        self.tableView.register(CustomCell.self, forCellReuseIdentifier: "customCell")
+        self.tableView.register(SearchTableViewCustomCell.self, forCellReuseIdentifier: "SearchTableViewCustomCell")
         tableView.dataSource = self
         tableView.delegate = self
         setupLayout()
@@ -123,7 +123,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? CustomCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCustomCell", for: indexPath) as? SearchTableViewCustomCell else {return UITableViewCell()}
 
         let models = inSearchMode ? filteredShoes[indexPath.row] : shoesModels[indexPath.row]
         
@@ -177,4 +177,18 @@ extension SearchViewController: UISearchResultsUpdating {
 
     }
 }
-
+extension SearchViewController {
+    func setupNavigationBar(){
+        
+        lazy var logoLabel: UILabel = {
+            let label = UILabel()
+            label.font = UIFont(name: "Copperplate-Bold", size: 25)
+            label.text = "GenuineShoes"
+            label.textAlignment = .center
+            return label
+        }()
+        navigationItem.titleView = logoLabel
+        
+        
+    }
+}

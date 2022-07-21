@@ -10,6 +10,9 @@ target 'GenuineShoes' do
  pod 'Firebase/Database'
  pod 'CodableFirebase'
  pod 'SnapKit', '~> 5.6.0'
+ pod 'YPImagePicker'
+ pod 'FirebaseStorage'
+ pod 'FirebaseFirestore'
   # Pods for GenuineShoes
 
   target 'GenuineShoesTests' do

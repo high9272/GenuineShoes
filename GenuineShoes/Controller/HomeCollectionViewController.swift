@@ -17,6 +17,9 @@ class HomeCollectionViewController: UIViewController {
        var ref: DatabaseReference! //FireBase RealTime Database
        var shoesmodel: ShoesModel?
     
+
+    
+    
     
     
     lazy var myCollectionView: UICollectionView = {
@@ -39,7 +42,8 @@ class HomeCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
-        self.navigationController?.navigationBar.isHidden = true
+        setupNavigationBar()
+        //self.navigationController?.navigationBar.isHidden = true
         ref = Database.database().reference()
         view.addSubview(myCollectionView)
         myCollectionView.snp.makeConstraints { make in
@@ -89,22 +93,22 @@ extension HomeCollectionViewController: UICollectionViewDataSource {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard
-            kind == UICollectionView.elementKindSectionHeader,
-            
-            let header = collectionView.dequeueReusableSupplementaryView(
-                ofKind: kind,
-                withReuseIdentifier: "HomeCollectionHeaderView",
-                for: indexPath
-            ) as? HomeCollectionHeaderView
-        else { return UICollectionReusableView() }
-        
-
-        header.setup()
-
-        return header
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        guard
+//            kind == UICollectionView.elementKindSectionHeader,
+//
+//            let header = collectionView.dequeueReusableSupplementaryView(
+//                ofKind: kind,
+//                withReuseIdentifier: "HomeCollectionHeaderView",
+//                for: indexPath
+//            ) as? HomeCollectionHeaderView
+//        else { return UICollectionReusableView() }
+//
+//
+//        header.setup()
+//
+//        return header
+//    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as? HomeCollectionViewCell
@@ -136,9 +140,9 @@ extension HomeCollectionViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: 230)
     }
     //------>MARK: 헤더뷰
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width  , height: 100.0)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        CGSize(width: collectionView.frame.width  , height: 100.0)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let value: CGFloat = 3
@@ -147,5 +151,21 @@ extension HomeCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
     
+}
+
+extension HomeCollectionViewController {
+    func setupNavigationBar(){
+        
+        lazy var logoLabel: UILabel = {
+            let label = UILabel()
+            label.font = UIFont(name: "Copperplate-Bold", size: 25)
+            label.text = "GenuineShoes"
+            label.textAlignment = .center
+            return label
+        }()
+        navigationItem.titleView = logoLabel
+
+        
+    }
 }
 

@@ -18,13 +18,15 @@ class TabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
-        
+        self.delegate = self
         
         //self.navigationItem.setHidesBackButton(true, animated: true)
         
         
         let collectionViewController = UINavigationController(rootViewController: HomeCollectionViewController())
         collectionViewController.tabBarItem = UITabBarItem(title: "HOME", image:UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house"))
+        
+        //let detailViewController = UINavigationController(rootViewController: DetailViewController())
         
         
 //        let homeViewController = UINavigationController(rootViewController: HomeViewController())
@@ -36,9 +38,11 @@ class TabController: UITabBarController {
         let myPageViewController = UINavigationController(rootViewController: MyPageViewController())
         myPageViewController.tabBarItem = UITabBarItem(title: "MY", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person"))
         
+        let userCheckViewController = UINavigationController(rootViewController: UserCheckViewController())
+        userCheckViewController.tabBarItem = UITabBarItem(title: "CHECK", image: UIImage(systemName: "photo"), selectedImage: UIImage(systemName: "photo"))
         
         
-        viewControllers = [collectionViewController, searchViewController, myPageViewController]
+        viewControllers = [collectionViewController, searchViewController, userCheckViewController , myPageViewController]
         
         
     }
@@ -58,5 +62,12 @@ class TabController: UITabBarController {
         }
         
         
+    }
+}
+extension TabController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let index = viewControllers?.firstIndex(of: viewController)
+        print("\(index)번째 탭을 눌렀습니다")
+        return true
     }
 }

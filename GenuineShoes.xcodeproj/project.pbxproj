@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		101DA2ABB9F4B0993913B770 /* Pods_GenuineShoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */; };
 		46DF22735CDB1C78AFCB9593 /* Pods_GenuineShoes_GenuineShoesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */; };
+		731BF4522887D6B300AFACEB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BF4512887D6B300AFACEB /* PostService.swift */; };
+		7348CC0D2886B9D40042BD18 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7348CC0C2886B9D40042BD18 /* ImageUploader.swift */; };
 		734CBC91286ABCE100493F77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CBC90286ABCE100493F77 /* HomeViewController.swift */; };
 		739893742869F033000DADEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893732869F033000DADEC /* AppDelegate.swift */; };
 		739893762869F033000DADEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893752869F033000DADEC /* SceneDelegate.swift */; };
@@ -19,6 +21,7 @@
 		739893952869F037000DADEC /* GenuineShoesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893942869F037000DADEC /* GenuineShoesUITests.swift */; };
 		739893972869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */; };
 		739893A42869F141000DADEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 739893A32869F141000DADEC /* GoogleService-Info.plist */; };
+		73A794E22882BAE80010D0EA /* UserCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A794E12882BAE80010D0EA /* UserCheckViewController.swift */; };
 		73A88FFD28729EB900B09C1A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A88FFC28729EB900B09C1A /* SettingViewController.swift */; };
 		73A890002872CCB700B09C1A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A88FFF2872CCB700B09C1A /* WebKit.framework */; };
 		73A890022872D3CB00B09C1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A890012872D3CB00B09C1A /* TabController.swift */; };
@@ -28,12 +31,15 @@
 		73AA3CF1287FECA400AB0681 /* HomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA3CF0287FECA400AB0681 /* HomeCollectionHeaderView.swift */; };
 		73B62F7D287D583B00DC4A49 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B62F7C287D583B00DC4A49 /* Constant.swift */; };
 		73B62F80287D58B700DC4A49 /* ShoesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B62F7F287D58B700DC4A49 /* ShoesService.swift */; };
-		73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DCC4286ED78600681EB6 /* CustomCell.swift */; };
+		73C1DCC5286ED78600681EB6 /* SearchTableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DCC4286ED78600681EB6 /* SearchTableViewCustomCell.swift */; };
 		73D1819A287177B200683461 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D18199287177B200683461 /* Extension.swift */; };
 		73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3260128708FAF00E4D900 /* ShoesModel.swift */; };
 		73D43F952881731F003D05F7 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D43F942881731F003D05F7 /* EmailLoginViewController.swift */; };
 		73D6BE5A28742E9F00812B20 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6BE5928742E9F00812B20 /* MyPageViewController.swift */; };
+		73DEEE8C2889182C0002BF54 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DEEE8B2889182C0002BF54 /* UploadPostController.swift */; };
+		73DEEE8E288920460002BF54 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DEEE8D288920460002BF54 /* InputTextView.swift */; };
 		73E1BA622871840300A2CD01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E1BA612871840300A2CD01 /* DetailViewController.swift */; };
+		73F4F334288529D000BEA1C3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F4F333288529D000BEA1C3 /* UserTableViewCell.swift */; };
 		BE226F0A08E182669015C402 /* Pods_GenuineShoesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1882F414216AFBA58EF379D /* Pods_GenuineShoesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,8 @@
 		28FB3C02725E6A614FF93EE5 /* Pods_GenuineShoes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4889E81B7F9052DA25E2084D /* Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7085786851315410EA0A4CD2 /* Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoes-GenuineShoesUITests/Pods-GenuineShoes-GenuineShoesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		731BF4512887D6B300AFACEB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		7348CC0C2886B9D40042BD18 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		734CBC90286ABCE100493F77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		739893702869F033000DADEC /* GenuineShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenuineShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739893732869F033000DADEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 		739893942869F037000DADEC /* GenuineShoesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesUITests.swift; sourceTree = "<group>"; };
 		739893962869F037000DADEC /* GenuineShoesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineShoesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		739893A32869F141000DADEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73A794E12882BAE80010D0EA /* UserCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckViewController.swift; sourceTree = "<group>"; };
 		73A88FFC28729EB900B09C1A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		73A88FFF2872CCB700B09C1A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		73A890012872D3CB00B09C1A /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
@@ -81,12 +90,15 @@
 		73AA3CF0287FECA400AB0681 /* HomeCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionHeaderView.swift; sourceTree = "<group>"; };
 		73B62F7C287D583B00DC4A49 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		73B62F7F287D58B700DC4A49 /* ShoesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesService.swift; sourceTree = "<group>"; };
-		73C1DCC4286ED78600681EB6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		73C1DCC4286ED78600681EB6 /* SearchTableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCustomCell.swift; sourceTree = "<group>"; };
 		73D18199287177B200683461 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		73D3260128708FAF00E4D900 /* ShoesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesModel.swift; sourceTree = "<group>"; };
 		73D43F942881731F003D05F7 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		73D6BE5928742E9F00812B20 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		73DEEE8B2889182C0002BF54 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		73DEEE8D288920460002BF54 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		73E1BA612871840300A2CD01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		73F4F333288529D000BEA1C3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		7E68F5834C6B8346758CF3AC /* Pods-GenuineShoesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoesTests.debug.xcconfig"; path = "Target Support Files/Pods-GenuineShoesTests/Pods-GenuineShoesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87A8910572F68607AC851F17 /* Pods_GenuineShoes_GenuineShoesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenuineShoes_GenuineShoesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D13A48CA7BEC6BDDCE399C3 /* Pods-GenuineShoes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenuineShoes.release.xcconfig"; path = "Target Support Files/Pods-GenuineShoes/Pods-GenuineShoes.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +218,8 @@
 				73A88FFC28729EB900B09C1A /* SettingViewController.swift */,
 				73A890032872D4C800B09C1A /* SearchViewController.swift */,
 				73D6BE5928742E9F00812B20 /* MyPageViewController.swift */,
+				73A794E12882BAE80010D0EA /* UserCheckViewController.swift */,
+				73DEEE8B2889182C0002BF54 /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,9 +227,10 @@
 		73AA3CEF287FCE2100AB0681 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				73C1DCC4286ED78600681EB6 /* CustomCell.swift */,
+				73C1DCC4286ED78600681EB6 /* SearchTableViewCustomCell.swift */,
 				73AA3CED287FCE1A00AB0681 /* HomeCollectionViewCell.swift */,
 				73AA3CF0287FECA400AB0681 /* HomeCollectionHeaderView.swift */,
+				73F4F333288529D000BEA1C3 /* UserTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -224,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				73B62F7F287D58B700DC4A49 /* ShoesService.swift */,
+				7348CC0C2886B9D40042BD18 /* ImageUploader.swift */,
+				731BF4512887D6B300AFACEB /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -241,6 +258,7 @@
 			children = (
 				73D18199287177B200683461 /* Extension.swift */,
 				73B62F7C287D583B00DC4A49 /* Constant.swift */,
+				73DEEE8D288920460002BF54 /* InputTextView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -535,14 +553,20 @@
 				73D43F952881731F003D05F7 /* EmailLoginViewController.swift in Sources */,
 				73AA3CEE287FCE1A00AB0681 /* HomeCollectionViewCell.swift in Sources */,
 				73A890042872D4C800B09C1A /* SearchViewController.swift in Sources */,
+				73F4F334288529D000BEA1C3 /* UserTableViewCell.swift in Sources */,
+				731BF4522887D6B300AFACEB /* PostService.swift in Sources */,
+				73DEEE8E288920460002BF54 /* InputTextView.swift in Sources */,
 				73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */,
 				73AA3CEC287FCD4600AB0681 /* HomeCollectionViewController.swift in Sources */,
 				739893782869F033000DADEC /* LoginViewController.swift in Sources */,
-				73C1DCC5286ED78600681EB6 /* CustomCell.swift in Sources */,
+				73C1DCC5286ED78600681EB6 /* SearchTableViewCustomCell.swift in Sources */,
 				73A88FFD28729EB900B09C1A /* SettingViewController.swift in Sources */,
 				73B62F80287D58B700DC4A49 /* ShoesService.swift in Sources */,
 				73B62F7D287D583B00DC4A49 /* Constant.swift in Sources */,
+				73DEEE8C2889182C0002BF54 /* UploadPostController.swift in Sources */,
 				73A890022872D3CB00B09C1A /* TabController.swift in Sources */,
+				73A794E22882BAE80010D0EA /* UserCheckViewController.swift in Sources */,
+				7348CC0D2886B9D40042BD18 /* ImageUploader.swift in Sources */,
 				73AA3CF1287FECA400AB0681 /* HomeCollectionHeaderView.swift in Sources */,
 				73D6BE5A28742E9F00812B20 /* MyPageViewController.swift in Sources */,
 				739893742869F033000DADEC /* AppDelegate.swift in Sources */,

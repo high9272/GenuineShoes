@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import SnapKit
+import Firebase
+import FirebaseStorage
 
 class HomeCollectionHeaderView: UICollectionReusableView {
     

@@ -1,5 +1,5 @@
 //
-//  customCell.swift
+//  TableViewCustomCell.swift
 //  GenuineShoes
 //
 //  Created by DaWoon Jeong on 2022/07/01.
@@ -8,9 +8,9 @@
 import UIKit
 import SnapKit
 
-class CustomCell: UITableViewCell {
+class SearchTableViewCustomCell: UITableViewCell {
     
-    static let identifier = "customCell"
+    static let identifier = "SearchTableViewCustomCell"
     
     lazy var modelLabel: UILabel = {
         var label = UILabel()
