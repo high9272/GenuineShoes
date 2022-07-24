@@ -21,29 +21,41 @@ class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate
 
     let uid = Auth.auth().currentUser?.uid
 
+    private var posts = [PostModel]()
     
-    
-    
-    var selectedImage: UIImage? {
-        didSet{myImage.image = selectedImage}
-    }
     private let storage = Storage.storage().reference()
     
-    lazy var myImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
+//
+//
+//    var selectedImage: UIImage? {
+//        didSet{myImage.image = selectedImage}
+//    }
+//
     
-    lazy var imageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "sdsdsds"
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        return label
-        
-    }()
 
+    
+//    lazy var myImage: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.contentMode = .scaleAspectFit
+//        return imageView
+//    }()
+//
+//    lazy var imageLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "sdsdsds"
+//        label.numberOfLines = 0
+//        label.textAlignment = .center
+//        return label
+//
+//    }()
+
+    
+    lazy var myTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
     
     @objc func uploadImageBtnTapped(){
         
@@ -51,6 +63,7 @@ class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate
         config.library.mediaType = .photo
         config.shouldSaveNewPicturesToAlbum = false
         config.startOnScreen = .library
+        config.showsPhotoFilters = false
         config.screens = [.library]
         config.library.maxNumberOfItems = 3
 
@@ -132,8 +145,14 @@ class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.myTableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserTableViewCell")
         setupNavigationBar()
         setupLayout()
+        fetchPosts()
+        view.addSubview(myTableView)
+        myTableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
 //        guard let urlString = UserDefaults.standard.value(forKey: "url") as? String,
 //        let url = URL(string: urlString)
 //        
@@ -153,21 +172,22 @@ class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate
         
     }
     
+    func fetchPosts(){
+        PostService.fetchPosts { posts in
+            self.posts = posts
+            self.myTableView.reloadData()
+            
+        }
+        
+    }
     
 
     
     func setupLayout(){
         
-        [myImage, imageLabel].forEach { view.addSubview($0)}
+        [].forEach { view.addSubview($0)}
         
-        myImage.snp.makeConstraints { make in
-            make.center.equalTo(view)
-            make.height.width.equalTo(300)
-        }
-        imageLabel.snp.makeConstraints { make in
-            make.top.equalTo(myImage.snp.bottom).offset(10)
-            make.leading.trailing.equalToSuperview()
-        }
+
   
     }
     
@@ -200,3 +220,25 @@ extension UserCheckViewController {
     
 }
 
+extension UserCheckViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+        return 600
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath)
+                as? UserTableViewCell else {return UITableViewCell()}
+        cell.backgroundColor = .systemBackground
+        cell.viewModel = PostViewModel(post: posts[indexPath.row])
+        return cell
+        
+    }
+    
+    
+}

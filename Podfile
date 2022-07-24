@@ -13,6 +13,7 @@ target 'GenuineShoes' do
  pod 'YPImagePicker'
  pod 'FirebaseStorage'
  pod 'FirebaseFirestore'
+ pod 'SDWebImage'
   # Pods for GenuineShoes
 
   target 'GenuineShoesTests' do

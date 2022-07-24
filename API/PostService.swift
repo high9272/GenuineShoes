@@ -19,11 +19,27 @@ struct PostService {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         ImageUploader.uploadImage(image: image) { imageUrl in
-            let data = ["caption": caption, "timestamp": Timestamp(date: Date()), "likes": 0, "imageurl": imageUrl, "owneruid": uid, ] as [String : Any]
+            let data = ["caption": caption, "timestamp": Timestamp(date: Date()), "likes": 0, "imageUrl": imageUrl, "owneruid": uid, ] as [String : Any]
             
             collectionPost.addDocument(data: data)
         }
-
+        
     }
     
+    static func fetchPosts(completion: @escaping([PostModel]) -> Void ){
+        collectionPost.getDocuments { (snapshot, error) in
+            
+            guard let docments = snapshot?.documents else {return}
+            
+            
+            let posts = docments.map({ PostModel(postId: $0.documentID, dictionary: $0.data())})
+            completion(posts)
+        }
+        
+        
+        //            documnets.forEach { doc in
+        //                print("doc data is \(doc.data())")
+    }
 }
+
+

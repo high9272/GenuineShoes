@@ -84,6 +84,7 @@ class UploadPostController: UIViewController {
         
         
         [PhotoImageView, captionTextView, characterCountLabel].forEach {view.addSubview($0)}
+        
         PhotoImageView.snp.makeConstraints { make in
             make.width.height.equalTo(200)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
