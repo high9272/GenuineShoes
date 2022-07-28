@@ -803,6 +803,9 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - PromisesObjC (2.1.1)
   - PryntTrimmerView (4.0.2)
   - SDWebImage (5.13.2):
@@ -822,6 +825,7 @@ DEPENDENCIES:
   - FirebaseFirestore
   - FirebaseStorage
   - GoogleSignIn (= 5.0.2)
+  - NVActivityIndicatorView
   - SDWebImage
   - SnapKit (~> 5.6.0)
   - YPImagePicker
@@ -857,6 +861,7 @@ SPEC REPOS:
     - leveldb-library
     - Libuv-gRPC
     - nanopb
+    - NVActivityIndicatorView
     - PromisesObjC
     - PryntTrimmerView
     - SDWebImage
@@ -894,6 +899,7 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
@@ -901,6 +907,6 @@ SPEC CHECKSUMS:
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 14e1c3d0902e80bd07cff77a7afcb12b9e816e2d
+PODFILE CHECKSUM: 5a5899d4ab5c41257b7c02e2c65b27e1fd66ab97
 
 COCOAPODS: 1.11.3

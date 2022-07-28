@@ -12,6 +12,7 @@
 		731BF4522887D6B300AFACEB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731BF4512887D6B300AFACEB /* PostService.swift */; };
 		7348CC0D2886B9D40042BD18 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7348CC0C2886B9D40042BD18 /* ImageUploader.swift */; };
 		734CBC91286ABCE100493F77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CBC90286ABCE100493F77 /* HomeViewController.swift */; };
+		739283552892625F00698693 /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739283542892625F00698693 /* CommentController.swift */; };
 		7392F3D8288D2D62006A2A30 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392F3D7288D2D62006A2A30 /* PostViewModel.swift */; };
 		739893742869F033000DADEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893732869F033000DADEC /* AppDelegate.swift */; };
 		739893762869F033000DADEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739893752869F033000DADEC /* SceneDelegate.swift */; };
@@ -69,6 +70,7 @@
 		731BF4512887D6B300AFACEB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		7348CC0C2886B9D40042BD18 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		734CBC90286ABCE100493F77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		739283542892625F00698693 /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		7392F3D7288D2D62006A2A30 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		739893702869F033000DADEC /* GenuineShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenuineShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739893732869F033000DADEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				73D6BE5928742E9F00812B20 /* MyPageViewController.swift */,
 				73A794E12882BAE80010D0EA /* UserCheckViewController.swift */,
 				73DEEE8B2889182C0002BF54 /* UploadPostController.swift */,
+				739283542892625F00698693 /* CommentController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				73F4F334288529D000BEA1C3 /* UserTableViewCell.swift in Sources */,
 				731BF4522887D6B300AFACEB /* PostService.swift in Sources */,
 				73DEEE8E288920460002BF54 /* InputTextView.swift in Sources */,
+				739283552892625F00698693 /* CommentController.swift in Sources */,
 				73D3260228708FB000E4D900 /* ShoesModel.swift in Sources */,
 				73AA3CEC287FCD4600AB0681 /* HomeCollectionViewController.swift in Sources */,
 				739893782869F033000DADEC /* LoginViewController.swift in Sources */,

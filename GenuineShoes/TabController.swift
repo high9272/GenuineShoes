@@ -68,6 +68,8 @@ extension TabController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let index = viewControllers?.firstIndex(of: viewController)
         print("\(index)번째 탭을 눌렀습니다")
+        
+        
         return true
     }
 }

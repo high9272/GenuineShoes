@@ -16,6 +16,7 @@ struct PostModel {
     let ownerUid: String
     let timestamp : Timestamp
     let postId: String
+    var didlike = false
     
     init(postId: String, dictionary: [String:Any]) {
         self.caption = dictionary["caption"] as? String ?? ""

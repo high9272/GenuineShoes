@@ -7,7 +7,15 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
+
 class UploadPostController: UIViewController {
+    let indicator = NVActivityIndicatorView(frame: CGRect(x: 162, y: 100, width: 50, height: 50),
+                                            type: .circleStrokeSpin,
+                                            color: .black,
+                                            padding: 0)
+    
+    let uscv = UserCheckViewController()
     
     
     var selectedImage: UIImage?{
@@ -55,7 +63,10 @@ class UploadPostController: UIViewController {
     @objc func didTapDone(){
         guard let image = selectedImage else {return}
         guard let caption = captionTextView.text else {return}
+        indicator.startAnimating()
+        
         PostService.uploadPost(caption: caption, image: image) { error in
+            self.indicator.stopAnimating()
             if error == error {
                 print("failed to upload")
                 return
@@ -63,7 +74,11 @@ class UploadPostController: UIViewController {
             
             //            self.dismiss(animated: true)
         }
+   
         self.dismiss(animated: true)
+        print("업로ㄷ 컨트롤러가 사라집니다")
+        uscv.testprint()
+        
         
     }
     
@@ -83,7 +98,7 @@ class UploadPostController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .done, target: self, action: #selector(didTapDone))
         
         
-        [PhotoImageView, captionTextView, characterCountLabel].forEach {view.addSubview($0)}
+        [PhotoImageView, captionTextView, characterCountLabel, indicator].forEach {view.addSubview($0)}
         
         PhotoImageView.snp.makeConstraints { make in
             make.width.height.equalTo(200)

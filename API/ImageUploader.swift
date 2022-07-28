@@ -14,7 +14,7 @@ struct ImageUploader {
     static func uploadImage(image: UIImage, completion: @escaping(String) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.75) else {return}
         let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/images/\(filename)")
+        let ref = Storage.storage().reference(withPath: "/postImages/\(filename)")
         
         ref.putData(imageData, metadata: nil) { metaData, error in
             if let error = error {

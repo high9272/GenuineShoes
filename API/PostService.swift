@@ -27,7 +27,7 @@ struct PostService {
     }
     
     static func fetchPosts(completion: @escaping([PostModel]) -> Void ){
-        collectionPost.getDocuments { (snapshot, error) in
+        collectionPost.order(by: "timestamp", descending: true).getDocuments { (snapshot, error) in
             
             guard let docments = snapshot?.documents else {return}
             

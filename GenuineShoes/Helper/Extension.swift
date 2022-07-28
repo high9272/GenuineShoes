@@ -47,3 +47,7 @@ extension UIImageView {
     }
     
 }
+
+extension UIViewController {
+    
+}

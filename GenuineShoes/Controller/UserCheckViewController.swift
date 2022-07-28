@@ -17,37 +17,17 @@ import YPImagePicker
 
 class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    func testprint(){
+        posts.removeAll()
+        fetchPosts()
+        print("리프레시 완료")
+
+    }
+    
     let db = Firestore.firestore()
-
     let uid = Auth.auth().currentUser?.uid
-
     private var posts = [PostModel]()
-    
     private let storage = Storage.storage().reference()
-    
-//
-//
-//    var selectedImage: UIImage? {
-//        didSet{myImage.image = selectedImage}
-//    }
-//
-    
-
-    
-//    lazy var myImage: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.contentMode = .scaleAspectFit
-//        return imageView
-//    }()
-//
-//    lazy var imageLabel: UILabel = {
-//        let label = UILabel()
-//        label.text = "sdsdsds"
-//        label.numberOfLines = 0
-//        label.textAlignment = .center
-//        return label
-//
-//    }()
 
     
     lazy var myTableView: UITableView = {
@@ -80,6 +60,8 @@ class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate
             
             let controller = UploadPostController()
             controller.selectedImage = selectedImage
+            
+            print("업로드 포스트컨트롤러가 나타납니다")
             let nav = UINavigationController(rootViewController: controller)
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: false)
@@ -91,105 +73,53 @@ class UserCheckViewController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {return}
-//
-//        guard let imageData = image.pngData() else {return}
-//
-//
-//        guard let image = selectedImage else {return}
-//
-//        PostService.uploadPost(image: image) { err in
-//            if let err = err {
-//                print(err)
-//            }
-//            self.dismiss(animated: true)
-//        }
-//
         
-//
-//        storage.child("images/file.png").putData(imageData, metadata: nil, completion: {_, error in
-//            guard error == nil else {
-//                print("Failed To Upload")
-//                return
-//            }
-//
-//            self.storage.child("images/file.png").downloadURL(completion: {url, error in
-//
-//                guard let url = url, error == nil else{
-//                    return
-//                }
-//
-//                let urlString = url.absoluteString
-//
-//                DispatchQueue.main.async {
-//                    self.imageLabel.text = urlString
-//                    self.myImage.image = image
-//                }
-//                print("download url: \(urlString)")
-//                UserDefaults.standard.set(urlString, forKey: "url")
-//
-//
-//            })
-//
-//        })
-//
+   
+
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
-        
-        
-        
+
     }
     
-    
-    
+    @objc func handleRefresh(){
+        posts.removeAll()
+        fetchPosts()
+        
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myTableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserTableViewCell")
         setupNavigationBar()
-        setupLayout()
         fetchPosts()
+        tableViewRefresh()
         view.addSubview(myTableView)
         myTableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-//        guard let urlString = UserDefaults.standard.value(forKey: "url") as? String,
-//        let url = URL(string: urlString)
-//        
-//        
-//        else {return}
-//        imageLabel.text = urlString
-//
-//        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-//            guard let data = data, error == nil else {return}
-//
-//            DispatchQueue.main.async {
-//                let image = UIImage(data: data)
-//                self.myImage.image = image
-//            }
-//        }
-//        task.resume()
-        
+      
     }
     
     func fetchPosts(){
         PostService.fetchPosts { posts in
             self.posts = posts
+            self.myTableView.refreshControl?.endRefreshing()
             self.myTableView.reloadData()
-            
+          
         }
         
     }
     
-
     
-    func setupLayout(){
+    func tableViewRefresh(){
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        myTableView.refreshControl = refresher
         
-        [].forEach { view.addSubview($0)}
-        
-
-  
     }
+
     
 }
 
@@ -224,7 +154,7 @@ extension UserCheckViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
-        return 600
+        return 550
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -234,11 +164,34 @@ extension UserCheckViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath)
                 as? UserTableViewCell else {return UITableViewCell()}
+        cell.delegate = self //----->>>중요!!!!
+        cell.selectionStyle = .none //셀을 클릭했을때 회색으로 변하지 않게 하기
         cell.backgroundColor = .systemBackground
         cell.viewModel = PostViewModel(post: posts[indexPath.row])
         return cell
         
     }
+    
+    
+}
+extension UserCheckViewController: FeedCellDelegate {
+
+    
+    func cell(_ cell: UserTableViewCell, didLike post: PostModel) {
+        print("좋아요 버튼을 눌렀습니다.")
+
+    }
+    
+    func cell(_ cell: UserTableViewCell, didUnLike post: PostModel) {
+        print("싫어요 버튼을 눌렀습니다.")
+    }
+    
+    func cell(_ cell: UserTableViewCell, wantToCommentView post: PostModel) {
+        let controller = CommentController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
     
     
 }

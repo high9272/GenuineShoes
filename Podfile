@@ -14,6 +14,7 @@ target 'GenuineShoes' do
  pod 'FirebaseStorage'
  pod 'FirebaseFirestore'
  pod 'SDWebImage'
+ pod 'NVActivityIndicatorView'
   # Pods for GenuineShoes
 
   target 'GenuineShoesTests' do
